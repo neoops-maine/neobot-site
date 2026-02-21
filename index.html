@@ -15,8 +15,9 @@
       radial-gradient(1200px 600px at 100% 0%,#2e1d73,transparent),linear-gradient(160deg,var(--bg),var(--bg2));}
     .wrap{max-width:980px;margin:0 auto;padding:32px 20px 64px}
     .hero{padding:40px 0 20px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{width:52px;height:52px;filter:drop-shadow(0 0 12px rgba(18,247,162,.35))}
     h1{font-size:44px;line-height:1.1;margin:0 0 10px}
-    .tag{display:inline-block;padding:6px 12px;border:1px solid #2f4380;border-radius:999px;color:var(--muted);font-size:12px}
     .lead{font-size:18px;color:#cfe0ff;max-width:760px}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:20px}
     .card{background:var(--card);border:1px solid #253a79;border-radius:16px;padding:18px;backdrop-filter: blur(8px)}
@@ -31,14 +32,17 @@
 <body>
   <div class="wrap">
     <section class="hero">
-      <span class="tag">OAuth Verification Support Page</span>
-      <h1>neobot</h1>
+      <div class="brand">
+        <img src="assets/logo.svg" alt="neobot logo"/>
+        <h1>neobot</h1>
+      </div>
       <p class="lead">
         <strong>neobot</strong> is an AI operations assistant owned and operated by <strong>fo</strong>.
         It helps with inbox triage, summaries, drafts, reminders, task tracking, and project operations.
       </p>
       <div class="cta">
         <a class="btn primary" href="privacy.html">Privacy Policy</a>
+        <a class="btn" href="terms.html">Terms of Service</a>
         <a class="btn" href="#data-use">Data Use</a>
       </div>
     </section>
@@ -76,7 +80,8 @@
 
     <footer>
       Contact: <a href="mailto:neoopsmain@gmail.com">neoopsmain@gmail.com</a> ·
-      Privacy: <a href="privacy.html">privacy policy</a>
+      Privacy: <a href="privacy.html">privacy policy</a> ·
+      Terms: <a href="terms.html">terms of service</a>
     </footer>
   </div>
 </body>
