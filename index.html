@@ -4,85 +4,171 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>neobot — AI Operations Assistant</title>
-  <meta name="description" content="neobot is an AI operations assistant owned by fo. This page describes app functionality and Google user data usage for OAuth verification." />
-  <style>
-    :root{
-      --bg:#070b1a; --bg2:#111a3a; --card:#0e1530cc; --txt:#eaf2ff; --muted:#9db1d9;
-      --a:#00e7ff; --b:#7a5cff; --c:#12f7a2;
-    }
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--txt);background:radial-gradient(1200px 600px at 10% -10%,#1d2e73,transparent),
-      radial-gradient(1200px 600px at 100% 0%,#2e1d73,transparent),linear-gradient(160deg,var(--bg),var(--bg2));}
-    .wrap{max-width:980px;margin:0 auto;padding:32px 20px 64px}
-    .hero{padding:40px 0 20px}
-    .brand{display:flex;align-items:center;gap:14px}
-    .brand img{width:52px;height:52px;filter:drop-shadow(0 0 12px rgba(18,247,162,.35))}
-    h1{font-size:44px;line-height:1.1;margin:0 0 10px}
-    .lead{font-size:18px;color:#cfe0ff;max-width:760px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:20px}
-    .card{background:var(--card);border:1px solid #253a79;border-radius:16px;padding:18px;backdrop-filter: blur(8px)}
-    h2{font-size:20px;margin:0 0 8px} h3{margin:0 0 6px;font-size:16px;color:#d7e7ff}
-    p,li{color:var(--muted);line-height:1.55}
-    a{color:var(--a)} .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;border:1px solid #2b4dcf}
-    .primary{background:linear-gradient(90deg,var(--b),#3e9bff);color:white;border:none}
-    footer{margin-top:30px;color:#8ea4d1;font-size:14px}
-  </style>
+  <meta name="description" content="neobot is a playful, practical AI operations assistant for inbox triage, drafting, reminders, and workflow follow-through." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="wrap">
-    <section class="hero">
-      <div class="brand">
-        <img src="assets/logo.jpg" alt="neobot logo"/>
-        <h1>neobot</h1>
-      </div>
-      <p class="lead">
-        <strong>neobot</strong> is an AI operations assistant owned and operated by <strong>fo</strong>.
-        It helps with inbox triage, summaries, drafts, reminders, task tracking, and project operations.
-      </p>
-      <div class="cta">
-        <a class="btn primary" href="privacy.html">Privacy Policy</a>
-        <a class="btn" href="terms.html">Terms of Service</a>
-        <a class="btn" href="#data-use">Data Use</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="#top" aria-label="neobot home">
+        <img src="assets/logo.jpg" alt="neobot logo" />
+        <span>neobot</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#capabilities">Capabilities</a>
+        <a href="#projects">Use Cases</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#trust">Trust</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <div>
+          <p class="kicker">AI operations assistant · owned by fo</p>
+          <h1>Inbox chaos, meet calm systems.</h1>
+          <p class="lead">
+            <strong>neobot</strong> helps teams and solo operators triage messages, draft better replies,
+            and keep high-priority tasks moving. Clean, fast, and just playful enough to keep ops fun.
+          </p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#contact">Get in touch</a>
+            <a class="btn" href="privacy.html">Privacy policy</a>
+            <a class="btn" href="terms.html">Terms</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 640 420" role="img">
+            <defs>
+              <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#67e8f9" />
+                <stop offset="100%" stop-color="#8b5cf6" />
+              </linearGradient>
+              <filter id="b" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="18" />
+              </filter>
+            </defs>
+            <rect width="640" height="420" rx="24" fill="#0d1631"/>
+            <circle cx="560" cy="80" r="74" fill="url(#g)" opacity=".35" filter="url(#b)"/>
+            <circle cx="120" cy="320" r="92" fill="url(#g)" opacity=".25" filter="url(#b)"/>
+            <rect x="44" y="56" width="550" height="302" rx="16" fill="#0b1228" stroke="rgba(103,232,249,.35)"/>
+            <rect x="66" y="84" width="220" height="18" rx="9" fill="rgba(103,232,249,.55)"/>
+            <rect x="66" y="118" width="320" height="12" rx="6" fill="rgba(168,184,222,.55)"/>
+            <rect x="66" y="144" width="260" height="12" rx="6" fill="rgba(168,184,222,.35)"/>
+            <rect x="66" y="188" width="246" height="128" rx="12" fill="#121d3d" stroke="rgba(139,92,246,.45)"/>
+            <rect x="336" y="188" width="236" height="56" rx="12" fill="#121d3d" stroke="rgba(103,232,249,.45)"/>
+            <rect x="336" y="260" width="236" height="56" rx="12" fill="#121d3d" stroke="rgba(52,211,153,.5)"/>
+            <circle cx="366" cy="216" r="10" fill="#67e8f9"/>
+            <circle cx="366" cy="288" r="10" fill="#34d399"/>
+            <path d="M376 216h124" stroke="rgba(232,238,255,.8)" stroke-width="7" stroke-linecap="round"/>
+            <path d="M376 288h150" stroke="rgba(232,238,255,.8)" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        </div>
       </div>
     </section>
 
-    <section class="grid">
-      <article class="card">
-        <h2>What this app does</h2>
-        <ul>
-          <li>Reads inbox messages for triage and summarization</li>
-          <li>Drafts replies for owner review</li>
-          <li>Flags urgent/security/payment-related emails</li>
-          <li>Supports operational reminders and follow-up actions</li>
-        </ul>
-      </article>
+    <section class="section" id="capabilities">
+      <h2>What neobot does</h2>
+      <p class="section-intro">Designed for real operations: fewer missed signals, faster drafting, better follow-through.</p>
+      <div class="grid">
+        <article class="card">
+          <svg class="icon" viewBox="0 0 28 28" aria-hidden="true"><defs><linearGradient id="i1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#67e8f9"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs><path d="M14 2c6 0 12 4 12 10s-4 14-12 14S2 20 2 14 8 2 14 2z" fill="url(#i1)"/></svg>
+          <h3>Smart inbox triage</h3>
+          <p>Sorts signal from noise and highlights priority messages like security, billing, and time-sensitive requests.</p>
+        </article>
+        <article class="card">
+          <svg class="icon" viewBox="0 0 28 28" aria-hidden="true"><defs><linearGradient id="i2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#34d399"/><stop offset="1" stop-color="#67e8f9"/></linearGradient></defs><path d="M14 2c6 0 12 4 12 10s-4 14-12 14S2 20 2 14 8 2 14 2z" fill="url(#i2)"/></svg>
+          <h3>Human-ready drafts</h3>
+          <p>Generates clean, context-aware reply drafts for review so final messaging stays accurate and on-brand.</p>
+        </article>
+        <article class="card">
+          <svg class="icon" viewBox="0 0 28 28" aria-hidden="true"><defs><linearGradient id="i3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#67e8f9"/></linearGradient></defs><path d="M14 2c6 0 12 4 12 10s-4 14-12 14S2 20 2 14 8 2 14 2z" fill="url(#i3)"/></svg>
+          <h3>Operational follow-up</h3>
+          <p>Turns loose conversation into actions with reminders, summaries, and clear next-step tracking.</p>
+        </article>
+      </div>
+    </section>
 
-      <article class="card" id="data-use">
-        <h2>How Google user data is used</h2>
-        <ul>
-          <li>Only to provide email assistance features requested by owner</li>
-          <li>No selling of personal data</li>
-          <li>No unrelated profiling/advertising use</li>
-          <li>Access can be revoked anytime in Google Account permissions</li>
-        </ul>
-      </article>
+    <section class="section use-cases" id="projects">
+      <h2>Projects & use cases</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Founder inbox command center</h3>
+          <ul>
+            <li>Daily digest with urgent tags</li>
+            <li>Auto-prioritized follow-ups</li>
+            <li>Drafts queued for one-click review</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Support + operations relay</h3>
+          <ul>
+            <li>Spot recurring issues quickly</li>
+            <li>Escalate risky or account-critical items</li>
+            <li>Keep handoffs clean across tools</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Lightweight team assistant</h3>
+          <ul>
+            <li>Capture action items from mixed channels</li>
+            <li>Summarize decisions after busy threads</li>
+            <li>Reduce context switching</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-      <article class="card">
-        <h2>Ownership & identity</h2>
+    <section class="section" id="workflow">
+      <h2>How it works</h2>
+      <div class="workflow">
+        <article class="step"><h3>Connect</h3><p>Authorize the account and pick the workflows you want automated.</p></article>
+        <article class="step"><h3>Observe</h3><p>neobot watches for important signals and classifies activity.</p></article>
+        <article class="step"><h3>Assist</h3><p>It drafts responses, summarizes threads, and suggests next actions.</p></article>
+        <article class="step"><h3>Review</h3><p>You stay in control with final approval and easy revocation options.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="trust">
+      <h2>Trust, privacy, and ownership</h2>
+      <p class="section-intro">neobot is built for useful automation without creepy data behavior.</p>
+      <div class="notice">
+        Google user data is used only to deliver requested assistant features (triage, summaries, drafts, reminders).<br />
+        No selling of personal data. No unrelated advertising profiles.
+      </div>
+      <div class="cta-panel" id="contact">
+        <h3>Let’s build calmer operations.</h3>
         <p>
-          App name: <strong>neobot</strong><br/>
-          Owner: <strong>fo</strong><br/>
-          Technical operator identity: <strong>neoops-maine</strong>
+          Owner: <strong>fo</strong><br />
+          Technical operator: <strong>neoops-maine</strong><br />
+          Contact: <a href="mailto:neoopsmain@gmail.com">neoopsmain@gmail.com</a>
         </p>
-      </article>
+        <div class="hero-cta">
+          <a class="btn primary" href="mailto:neoopsmain@gmail.com">Email neobot</a>
+          <a class="btn" href="privacy.html">Read privacy</a>
+          <a class="btn" href="terms.html">Read terms</a>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <footer>
-      Contact: <a href="mailto:neoopsmain@gmail.com">neoopsmain@gmail.com</a> ·
-      Privacy: <a href="privacy.html">privacy policy</a> ·
-      Terms: <a href="terms.html">terms of service</a>
-    </footer>
-  </div>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <small>© <span id="year"></span> neobot · AI operations assistant</small>
+      <div class="footer-links">
+        <a href="#top">Back to top</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

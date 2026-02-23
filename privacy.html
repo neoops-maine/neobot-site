@@ -1,33 +1,78 @@
 <!doctype html>
-<html lang="en"><head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>neobot Privacy Policy</title>
-  <style>body{font-family:Inter,system-ui,sans-serif;max-width:860px;margin:40px auto;padding:0 16px;line-height:1.65;background:#0a1024;color:#e9f0ff}a{color:#55d9ff}h1,h2{color:#fff}.muted{color:#9db1d9}</style>
-</head><body>
-  <h1>Privacy Policy — neobot</h1>
-  <p class="muted">Last updated: 2026-02-21</p>
-  <p><strong>neobot</strong> is an AI operations assistant owned by <strong>fo</strong>. This policy explains how data is handled when connecting Google services (including Gmail) through OAuth.</p>
+  <meta name="description" content="Privacy policy for neobot, including Google user data handling and OAuth usage." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="neobot home">
+        <img src="assets/logo.jpg" alt="neobot logo" />
+        <span>neobot</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#capabilities">Capabilities</a>
+        <a href="index.html#projects">Use Cases</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <h2>Data collected and used</h2>
-  <ul>
-    <li>Email metadata and message content required for triage/summarization/drafting.</li>
-    <li>OAuth access tokens and refresh tokens required for authorized API access.</li>
-  </ul>
+  <main id="main" class="container section" style="padding-top:54px">
+    <h1>Privacy Policy</h1>
+    <p class="section-intro">Last updated: 2026-02-23</p>
+    <p><strong>neobot</strong> is an AI operations assistant owned by <strong>fo</strong>. This policy describes how data is used when connecting Google services (including Gmail) via OAuth.</p>
 
-  <h2>Purpose of use</h2>
-  <ul>
-    <li>Provide inbox assistance and operational workflows requested by the owner.</li>
-    <li>Detect urgent/security/payment messages and surface them quickly.</li>
-  </ul>
+    <section class="card" style="margin-bottom:12px">
+      <h2>What we collect</h2>
+      <ul>
+        <li>Email content and metadata needed for triage, summaries, drafting, and reminder workflows.</li>
+        <li>OAuth access and refresh tokens required for authorized API access.</li>
+      </ul>
+    </section>
 
-  <h2>Data sharing</h2>
-  <p>Data is not sold. Data is not shared with third parties except as required to provide the requested service or comply with legal obligations.</p>
+    <section class="card" style="margin-bottom:12px">
+      <h2>Why we use it</h2>
+      <ul>
+        <li>Provide inbox assistance and operational workflows requested by the account owner.</li>
+        <li>Detect urgent or security-sensitive communication and surface it quickly.</li>
+      </ul>
+    </section>
 
-  <h2>Retention and deletion</h2>
-  <p>Data is retained only as needed for operational continuity. OAuth access can be revoked anytime from Google account permissions. You may request deletion by contacting <a href="mailto:neoopsmain@gmail.com">neoopsmain@gmail.com</a>.</p>
+    <section class="card" style="margin-bottom:12px">
+      <h2>Data sharing</h2>
+      <p>Data is not sold. Data is not shared with third parties except where required to provide the requested service or to comply with legal obligations.</p>
+    </section>
 
-  <h2>Security</h2>
-  <p>Reasonable administrative and technical safeguards are applied to protect credentials and operational data.</p>
+    <section class="card" style="margin-bottom:12px">
+      <h2>Retention and deletion</h2>
+      <p>Data is retained only as needed for operational continuity. OAuth access can be revoked at any time in Google account permissions. Deletion requests: <a href="mailto:neoopsmain@gmail.com">neoopsmain@gmail.com</a>.</p>
+    </section>
 
-  <p><a href="index.html">← Back to homepage</a></p>
-</body></html>
+    <section class="card" style="margin-bottom:12px">
+      <h2>Security</h2>
+      <p>Reasonable administrative and technical safeguards are applied to protect credentials and operational data.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <small>© <span id="year"></span> neobot</small>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:neoopsmain@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
